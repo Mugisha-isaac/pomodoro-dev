@@ -5,15 +5,20 @@ import Timer from './components/Timer/index.js';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from './components/Timer/reducers';
+import MyStack from './components/screens/MyStack.component';
+import {NavigationContainer} from '@react-navigation/native';
 
 
 const store = createStore(reducer);
 
 export default function App() {
   return(
-    <Provider store={store}>
-      <Timer/>
-    </Provider>
+    // <Provider store={store}>
+    //   <Timer/>
+    // </Provider>
+    <NavigationContainer>
+      <MyStack/>
+    </NavigationContainer>
   )
 }
 

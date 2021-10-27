@@ -1,6 +1,6 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 import {FontAwesome} from '@expo/vector-icons';
 
@@ -13,8 +13,8 @@ const Button = ({iconName,onPress})=>{
 }
 
 
-Button.PropTypes = {
-    iconName: PropTypes.string.isRequired,
-    onPress: PropTypes.func.isRequired
+Button.propTypes = {
+    iconName: propTypes.string.isRequired,
+    onPress: propTypes.func.isRequired
 }
 export default Button;

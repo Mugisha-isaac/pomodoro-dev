@@ -2,13 +2,18 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Timer from './components/Timer/index.js';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import reducer from './components/Timer/reducers';
+
+
+const store = createStore(reducer);
 
 export default function App() {
-  // return <Timer/>
   return(
-    <View style={styles.container}>
-       <Timer/>
-    </View>
+    <Provider store={store}>
+      <Timer/>
+    </Provider>
   )
 }
 

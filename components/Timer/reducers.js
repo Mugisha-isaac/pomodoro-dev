@@ -5,7 +5,7 @@ const TIMER_DURATION = 6;
 const initialState ={
     isPlaying: false,
     elapsedTime: 0,
-    timeDuration:TIMER_DURATION
+    timerDuration:TIMER_DURATION
 }
 
 function applyStartTimer(state){
@@ -20,7 +20,7 @@ function applyRestartTimer(state){
         ...state,
         isPlaying: false,
         elapsedTime:0,
-        timeDuration:TIMER_DURATION
+        timerDuration:TIMER_DURATION
     }
 }
 
@@ -57,8 +57,4 @@ function applyAddSecond(state){
                 return state;    
        }
     }
-
-
-
-
     export default reducer;
